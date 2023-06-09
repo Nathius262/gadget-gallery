@@ -1,0 +1,15 @@
+:root{
+    --grey:rgb(195, 193, 193);
+}
+
+#search form input{
+    border: 2px solid var(--grey);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50vw;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition-duration: 0.15s, 0.15s;
+    transition-timing-function: ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s;
+    transition-property: border-color, box-shadow;
+}
