@@ -1,40 +1,134 @@
 {% extends 'index.html' %}
 {% load static %}
 
+<!--<div id="logo" class="">
+        <span>Gadget Gallery</span>
+        <a class="py-2" href="#">                    
+            <img src="{% static 'img/logo.jpg' %}" alt="gadget-gallery logo" width="100">
+        </a>
+    </div>
+    <div id="search" class="">
+        <form>
+            <input class="" type="text" placeholder="Search" aria-label="Search">
+            <button type="button">search</button>
+        </form>
+    </div>
+-->
+
 {% block title %} Home {% endblock %}
 
     {% block content %}
-        <header class="site-header sticky-top py-1">
-            <nav class="container d-flex flex-column flex-md-row justify-content-between">
-                <a class="py-2" href="#" aria-label="Product">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
-                </a>
-                <a class="py-2 d-block d-md-inline-block" href="#">Tour</a>
-                <a class="py-2 d-block d-md-inline-block" href="#">Product</a>
-                <a class="py-2 d-block d-md-inline-block" href="#">Features</a>
-                <a class="py-2 d-block d-md-inline-block" href="#">Enterprise</a>
-                <a class="py-2 d-block d-md-inline-block" href="#">Support</a>
-                <a class="py-2 d-block d-md-inline-block" href="#">Pricing</a>
-                <a class="py-2 d-block d-md-inline-block" href="#">Cart</a>
-
-                
-            </nav>
-            <div id="search" class="container d-flex justify-content-center">
-                <form>
-                    <input class="" type="text" placeholder="Search" aria-label="Search">
-                </form>
-            </div>
-            
-        </header>
-        <div>
-            <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-                <div class="col-md-5 p-lg-5 mx-auto my-5">
-                  <h1 class="display-4 fw-normal">Gadget Gallery</h1>
-                  <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
-                  <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+        <main>
+            <div class="">
+                <div style="background: linear-gradient(to bottom, rgba(16, 32, 128, 0.8), rgba(0, 0, 80, 0.5)), url('{% static "img/h1.jpg" %}'); background-size:cover; background-repeat:no-repeat;" class="flex-h1 position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+                    <div class="col-md-5 p-lg-5 mx-auto my-5">
+                      <h1 class="display-4 fw-normal">Gadget Gallery</h1>
+                      <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
+                      <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+                    </div>
+                    <div class="product-device shadow-sm d-none d-md-block"></div>
+                    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
                 </div>
-                <div class="product-device shadow-sm d-none d-md-block"></div>
-                <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-              </div>
-        </div>
+            </div>
+
+            <section class="container mt-5">
+
+                <div class="mb-5 mt-3">
+                    <h4 style="text-transform:capitalize; text-align:center;">Featured Collections</h4>
+                </div>
+               <div class="row">
+
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card">
+                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+                
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card">
+                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+                
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card">
+                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+                
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card">
+                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+                
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card">
+                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+                
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card">
+                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+                
+                        </div>
+                    </div>
+                </div> 
+            </section>
+
+            <section class="container mt-5">
+
+                <div class="mb-5 mt-3">
+                    <h4 style="text-transform:capitalize; text-align:center;">Collections</h4>
+                </div>
+               <div class="row">
+
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card">
+                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+                
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card">
+                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+                
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card">
+                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+                
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card">
+                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+                
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card">
+                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+                
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card">
+                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+                
+                        </div>
+                    </div>
+                </div> 
+            </section>
+            
+        </main>
+        
     {% endblock %}

@@ -2,19 +2,23 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" initial>
-        <meta name="gadget-gallery" content="descrition">
+        <meta name="descrition" content="gadget-gallery">
 
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-        <link type="text/css" href="{% static 'css/style.css' %}" rel="stylesheet" media="all">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" media="all">
         <script src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
         <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png" sizes="16x16"/>
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
+        {% include 'snippets/header.html' %}
         {% block content%}
         {% endblock %}
-        <script src="{% static 'js/bootstrap.js' %}" type="text/js"></script>
+        {% include 'snippets/footer.html' %}
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+        
     </body>
 </html>

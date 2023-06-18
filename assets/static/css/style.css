@@ -1,15 +1,169 @@
 :root{
     --grey:rgb(195, 193, 193);
+    --lightgrey:rgb(228, 228, 228);
+    --main-blue:rgb(0, 0, 80);
+    --secondary-blue:rgb(2, 0, 223);
+    --white:white;
+    --black:#000;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.hidden{
+    display: none !important;
+}
+
+/*********
+***********
+* header begin
+***********
+**********/
+.background{
+    background-color: var(--main-blue);
+    color: var(--white);
+}
+.background a, .background .searchbtn, .background .navbar-toggler, .background .navbar-toggler-icon{
+    color: var(--white) !important;
+}
+.background a:hover, .background .searchbtn:hover{
+    color: var(--grey) !important;
+}
+.background nav{
+    margin: 10px auto 10px auto;
+}
+
+.site-header{
+    font-size: large;
+}
+
+.site-header nav a, .site-header nav .searchbtn{
+    color: var(--main-blue);
+    text-decoration: none;
+}
+.underline-nav{
+    border-bottom: 1px solid var(--main-blue);
+    padding-bottom: 0;
+}
+.underline-nav:hover{
+    border-bottom: 1px solid var(--secondary-blue);
+    padding-bottom: 0;
+}
+.site-header nav a:hover, .site-header nav .searchbtn:hover{
+    color: var(--secondary-blue);
+    
+}
+.logo-title{
+    font-size: large;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.logo-title hr{
+    margin: 0;
+}
+.navbar-toggler{
+    position: relative;
+    justify-self: center;
+    border: none;
+    outline: none;
+    align-self: flex-start;    
+}
+
+
+.searchbtn:hover{
+    color: var(--secondary-blue);
+    cursor: pointer;
 }
 
 #search form input{
     border: 2px solid var(--grey);
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     width: 50vw;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    transition-duration: 0.15s, 0.15s;
-    transition-timing-function: ease-in-out, ease-in-out;
-    transition-delay: 0s, 0s;
-    transition-property: border-color, box-shadow;
 }
+#search form button{
+    margin-left: 0;
+    background: var(--main-blue);
+    color: var(--white);
+    border: none;
+}
+
+.dropdown{
+    float: left;
+
+}
+.dropdown .dropbtn{
+    border: none;
+    outline: none;
+    background-color: inherit;
+    
+    font-family: inherit;
+    margin: 0;
+}
+.dropbtn:hover{
+    cursor: pointer;
+}
+
+.dropdown-content {
+    margin-top: 2px;
+    display: none;
+    position: absolute;
+    padding: 10px 10px;
+    background-color: var(--white);
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgb(0, 0, 0, .4);
+    z-index: 1;
+    border-radius: 3px;
+}
+.dropdown-content a{
+    padding: 0 10px 0 10px;
+    border-bottom: .2px solid var(--lightgrey);
+    color: var(--main-blue) !important;
+}
+
+.dropdown-content a:hover{
+    border-radius: 2px;
+    background-color: var(--lightgrey);
+    text-decoration: none;
+}
+.dropdown:hover .dropdown-content{
+    display: grid;
+}
+/*********
+***********
+* header end
+***********
+**********/
+
+/*********
+***********
+* main begin
+***********
+**********/
+.flex-h1{
+    color: var(--white);
+}
+
+
+/*********
+***********
+* main end
+***********
+**********/
+
+/*********
+***********
+* footer begin
+***********
+**********/
+
+footer{
+    margin-top: 20px;
+    background-color: var(--main-blue);
+    color: var(--white);
+}
+
+/*********
+***********
+* footer end
+***********
+**********/
