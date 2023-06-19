@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     #CUSTOM APP#
     ############
     'user',
+    'product',
 ]
 
 MIDDLEWARE = [
