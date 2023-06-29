@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     ############
     'user',
     'product',
+    'mptt',
 ]
 
 MIDDLEWARE = [
@@ -73,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'store.views.category_general_view'
             ],
         },
     },

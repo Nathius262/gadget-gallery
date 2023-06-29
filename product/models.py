@@ -8,7 +8,7 @@ from autoslug import AutoSlugField
 # Create your models here.
 class Tag(MPTTModel):
     tag_name = models.CharField(max_length=255)
-    parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=False, related_name="product_parent")
+    parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name="product_parent")
     date_updated = models.DateTimeField(auto_now=True)
     
     def __str__(self):

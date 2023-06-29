@@ -1,3 +1,5 @@
+{% load mptt_tags %}
+
 <header class="site-header navbar sticky-top py-1">
 
     <div class="logo-title mx-2 ms-lg-auto me-md-auto">
@@ -14,24 +16,27 @@
         
         <div class="underline-nav py-2 d-block d-md-inline-block dropdown" href="#">
             <div class="dropbtn">
-                Device <i class="fa fa-caret-down"></i>
-            </div>
-            <div class="dropdown-content">
-                <a  href="#">Link</a>
-                <a href="#">Link</a>
-                <a href="#">Link</a>
-            </div>
-        </div>
-        <div class="underline-nav py-2 d-block d-md-inline-block dropdown" href="#">
-            <div class="dropbtn">
                 Accessories <i class="fa fa-caret-down"></i>
             </div>
             <div class="dropdown-content">
-                <a href="#">Link</a>
-                <a href="#">Link</a>
-                <a href="#">Link</a>
+                                
+                <div class="py-2 d-block dropdown">
+                    {% recursetree category %}
+ 
+                    <div class="{% if not node.is_leaf_node %}dropbtn d-flex justify-content-between{%endif%}">
+                        <a href="{% url 'product:tag' node.id %}">{{node.tree_level}}{{node.tag_name}}</a>{% if not node.is_leaf_node %} <i class="fa fa-caret-right align-self-center"></i>{%endif%}
+                        {% if not node.is_leaf_node %}
+                        <div class="dropdown-children">
+                            {{children}}
+                        </div>
+                        {%endif%}
+                    </div>
+                    {% endrecursetree%}
+                </div>
+                
             </div>
         </div>
+
         <div class="underline-nav py-2 d-block d-md-inline-block dropdown" href="#">
             <div class="dropbtn">
                 Collections <i class="fa fa-caret-down"></i>
@@ -42,6 +47,7 @@
                 <a href="#">Link</a>
             </div>
         </div>
+        <a class="py-2 d-block d-md-inline-block" href="{% url 'product:product' %}">Products</a>
         <a class="py-2 d-block d-md-inline-block" href="#">Features</a>
         <a class="py-2 d-block d-md-inline-block" href="#">Support</a>
         <a class="py-2 d-block d-md-inline-block" href="#">Pricing</a>

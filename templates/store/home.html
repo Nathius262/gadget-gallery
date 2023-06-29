@@ -37,6 +37,16 @@
                     <h4 style="text-transform:capitalize; text-align:center;">Featured Collections</h4>
                 </div>
                <div class="row">
+                    {%for product in products%}
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <img class="card-img" src="{{product.image_url}}">
+                            <div class="card-content">
+                                <div class="card-title">{{product.product_name}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor%}
 
                     <div class="col-sm-6 col-lg-4 mb-4">
                         <div class="card">
@@ -45,87 +55,6 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-                
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-                
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-                
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-                
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-                
-                        </div>
-                    </div>
-                </div> 
-            </section>
-
-            <section class="container mt-5">
-
-                <div class="mb-5 mt-3">
-                    <h4 style="text-transform:capitalize; text-align:center;">Collections</h4>
-                </div>
-               <div class="row">
-
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-                
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-                
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-                
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-                
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-                
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-                
-                        </div>
-                    </div>
                 </div> 
             </section>
             

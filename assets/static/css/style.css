@@ -2,6 +2,7 @@
     --grey:rgb(195, 193, 193);
     --lightgrey:rgb(228, 228, 228);
     --main-blue:rgb(0, 0, 80);
+    --main-blue-hover:rgb(1, 1, 66);
     --secondary-blue:rgb(2, 0, 223);
     --white:white;
     --black:#000;
@@ -27,6 +28,9 @@ body{
 }
 .background a:hover, .background .searchbtn:hover{
     color: var(--grey) !important;
+}
+.background .dropdown-content a:hover{
+    color: var(--main-blue) !important;
 }
 .background nav{
     margin: 10px auto 10px auto;
@@ -87,7 +91,7 @@ body{
     border: none;
 }
 
-.dropdown{
+.dropdown .dropdown-children{
     float: left;
 
 }
@@ -109,14 +113,13 @@ body{
     position: absolute;
     padding: 10px 10px;
     background-color: var(--white);
-    min-width: 160px;
+    width: 25vw;
     box-shadow: 0 8px 16px 0 rgb(0, 0, 0, .4);
     z-index: 1;
     border-radius: 3px;
 }
 .dropdown-content a{
-    padding: 0 10px 0 10px;
-    border-bottom: .2px solid var(--lightgrey);
+    padding: 3px 10px 3px 10px;
     color: var(--main-blue) !important;
 }
 
@@ -127,6 +130,22 @@ body{
 }
 .dropdown:hover .dropdown-content{
     display: grid;
+}
+.dropdown-children{
+    display: none;
+    margin-top: 0px;
+    position: absolute;
+    left: 22vw;
+    width: 25vw;
+    padding: 10px 10px;
+    background-color: var(--white);
+    z-index: 1;
+    border-radius: 3px;
+}
+
+
+.dropbtn:hover .dropdown-children{
+    display: grid !important;
 }
 /*********
 ***********
@@ -141,6 +160,25 @@ body{
 **********/
 .flex-h1{
     color: var(--white);
+}
+
+.card-img-product{
+    width: 100%;
+    height: 350px;
+}
+
+.card-img{
+    width: 100%;
+
+}
+
+.btn-primary{
+    background-color: var(--main-blue);
+    outline: none;
+    border: none;
+}
+.btn-primary:hover{
+    background-color: var(--main-blue-hover);
 }
 
 
