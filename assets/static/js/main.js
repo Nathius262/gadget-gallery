@@ -36,3 +36,32 @@ for(let i of searchBtn){
     })
 }
 
+let addCartEl = document.querySelectorAll('.add-cart')
+let addCollectionEl = document.querySelectorAll('.add-collection')
+
+
+for (i of addCartEl){
+    i.addEventListener('click', ()=>{
+        addCart()
+        let elId = document.querySelectorAll('.card-body')
+        console.log(elId)
+    })
+    
+}
+
+for (i of addCollectionEl){
+    i.addEventListener('click', ()=>{
+        addCollection()
+        let elId = document.querySelectorAll('.card-body')
+        console.log(elId[i])
+    })
+    
+}
+
+function addCart(){
+    console.log("add to cart")
+}
+
+function addCollection(){
+    console.log("add to collection")
+}

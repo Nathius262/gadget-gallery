@@ -25,17 +25,23 @@ class Product (models.Model):
     price = models.DecimalField(max_digits=12, decimal_places=2)
     slug = AutoSlugField(populate_from="product_name", unique=True)
     digital = models.BooleanField(default=False, null=True, blank=False)
+    date = models.DateTimeField(auto_now_add=True, null=True)
 
     class Meta:
         _ = "product"
         verbose_name = _
         verbose_name_plural = _+"s"
+        ordering = [
+            '-date',
+            '-price',
+            '-product_name',
+        ]
 
     def __str__(self):
         return self.product_name
 
-    """def get_absolute_url(self):
-        return reverse("_detail", args=["pk": self.pk])"""
+    def get_absolute_url(self):
+        return reverse('product:product_detail', args=[self.pk])
         
     @property
     def image_url(self):

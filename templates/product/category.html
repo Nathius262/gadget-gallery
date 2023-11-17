@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% block title %}products{% endblock title %}
+
+{% block content %}
+    <main>
+        <section class="container mt-5">
+
+            <div class="mb-5 mt-3">
+                <h4 class="fw-bold h1" style="text-transform:capitalize; text-align:center;">All {{tag}}</h4>
+            </div>
+           <div class="row">
+                {%for product in products%}
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-img-product">
+                            <img class="card-img" src="{{product.image_url}}">
+                        </div>
+                        
+                        <div class="card-content">
+                            
+                            <div class="card-body" data-product_id="{{product.id}}">
+                                <div class="card-title h5 fw-bold">{{product.product_name}}</div>
+                                <p>{{product.product_description | truncatewords:5}}</p>
+                                <p class="fw-bold m-1">N {{product.price}}</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <div>
+                                    <button class="btn btn-outline-primary rounded-4 add-cart">Add to cart</button>
+                                    <a href="{{product.get_absolute_url}}" class="btn btn-outline-primary rounded-4">View</a> 
+                                </div>
+                                <div>
+                                    <button class="btn btn-outline-danger rounded-4"><i class="fa fa-heart add-collection"></i></button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+
+            </div>
+            {% include "snippets/product_paginator.html" %}
+           
+        </section>
+    </main>
+{% endblock content %}

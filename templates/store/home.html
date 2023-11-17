@@ -1,63 +1,100 @@
 {% extends 'index.html' %}
 {% load static %}
 
-<!--<div id="logo" class="">
-        <span>Gadget Gallery</span>
-        <a class="py-2" href="#">                    
-            <img src="{% static 'img/logo.jpg' %}" alt="gadget-gallery logo" width="100">
-        </a>
-    </div>
-    <div id="search" class="">
-        <form>
-            <input class="" type="text" placeholder="Search" aria-label="Search">
-            <button type="button">search</button>
-        </form>
-    </div>
--->
-
 {% block title %} Home {% endblock %}
 
-    {% block content %}
-        <main>
-            <div class="">
-                <div style="background: linear-gradient(to bottom, rgba(16, 32, 128, 0.8), rgba(0, 0, 80, 0.5)), url('{% static 'img/h1.jpg' %}'); background-size:cover; background-repeat:no-repeat;" class="flex-h1 position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-                    <div class="col-md-5 p-lg-5 mx-auto my-5">
-                      <h1 class="display-4 fw-normal">Gadget Gallery</h1>
-                      <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
-                      <a class="btn btn-outline-secondary" href="#">Coming soon</a>
-                    </div>
-                    <div class="product-device shadow-sm d-none d-md-block"></div>
-                    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+{% block content %}
+    <main>
+        <div class="">
+            <div style="background: linear-gradient(to bottom, rgba(16, 32, 128, 0.8), rgba(0, 0, 80, 0.5)), url('{% static 'img/h1.jpg' %}'); background-size:cover; background-repeat:no-repeat;" class="flex-h1 position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+                <div class="col-md-5 p-lg-5 mx-auto my-5">
+                    <h1 class="display-4 fw-normal">Gadget Gallery</h1>
+                    <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
+                    <a class="btn btn-outline-secondary" href="#">Coming soon</a>
                 </div>
+                <div class="product-device shadow-sm d-none d-md-block"></div>
+                <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
             </div>
+        </div>
 
-            <section class="container mt-5">
-
-                <div class="mb-5 mt-3">
-                    <h4 style="text-transform:capitalize; text-align:center;">Featured Collections</h4>
-                </div>
-               <div class="row">
-                    {%for product in products%}
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                            <img class="card-img" src="{{product.image_url}}">
-                            <div class="card-content">
-                                <div class="card-title">{{product.product_name}}</div>
+        <section>
+            <div class="">
+                <div class="container px-4 py-5" id="custom-cards">
+                    <div class="mb-5 mt-3">
+                        <h4 style="text-transform:capitalize; text-align:center;">Featured Collections</h4>
+                    </div>                  
+                    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5"  id="objAppend">
+                        {%for product in products%}
+                        <div class="col transitecol">
+                            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-4 shadow-lg" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{product.image_url}}); background-size:cover; height: 350px;">
+                                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                    
+                                    <h2 class="pt-3 mb-4 mt-0 display-6 lh-1 fw-normal">{{product.product_name}}</h2>
+                                    <p>{{product.product_description}}</p>
+                                    <ul class="d-flex list-unstyled mt-auto d-flex justify-content-between">
+        
+                                        <li class="d-flex align-items-center me-3">                                
+                                            <small><i class="fa fa-bed"></i> {{product.category}}</small>
+                                        </li>
+                                        <li class="d-flex align-items-center me-3">                                
+                                            <small><i class="fa fa-bed"></i> {% if product.digital == True %}Digital{%else%}Non-Digital{%endif%}</small>
+                                        </li>
+                                    </ul>
+                                    <div class=" mt-2 fw-bold h6 text-end">N{{product.price}}</div>
+                                </div>
                             </div>
                         </div>
+                        {% endfor %}
                     </div>
-                    {%endfor%}
+                    
+                </div>
+            </div>            
+        </section>
 
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-                
+        <section class="container mt-5">
+
+            <div class="mb-5 mt-3">
+                <h4 style="text-transform:capitalize; text-align:center;">Featured Collections</h4>
+            </div>
+            <div class="row">
+                {%for product in products%}
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-img-product">
+                            <img class="card-img" src="{{product.image_url}}">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title">{{product.product_name}}</div>
                         </div>
                     </div>
+                </div>
+                {%endfor%}
 
-                </div> 
-            </section>
-            
-        </main>
-        
-    {% endblock %}
+            </div> 
+        </section>
+        <section class="container mt-5">
+
+            <div class="mb-5 mt-3">
+                <h4 style="text-transform:capitalize; text-align:center; text-decoration:underline;">Collections</h4>
+            </div>
+            <div class="row">
+                {%for product in products%}
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-img-product">
+                            <img class="card-img" src="{{product.image_url}}">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title">{{product.product_name}}</div>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+
+            </div> 
+        </section>
+
+      
+    </main>
+    
+{% endblock %}
