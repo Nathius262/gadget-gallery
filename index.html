@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Gadget Gallery is an ecommerce accessories web application for selling products like phone, laptops, e.t.c and fix...">
+        <meta name="keywords" content="gadget, gallery">
+        <meta name="author" content="gadget-gallery">
+        <meta property="og:title" content="Gadget Gallery">
+        <meta property="og:description" content="Gadget Gallery is an ecommerce accessories web application for selling products like phone, laptops, e.t.c and fix...">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+
+        <!--twitter social share-->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Gadget Gallery" id="twitterTitle">
+        <meta name="twitter:description" content="Gadget Gallery is an ecommerce accessories web application for selling products like phone, laptops, e.t.c and fix..." id="twitterDescription">
+        <meta name="twitter:image" content="" id="twitterImage">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Gadget Gallery</title>
+
+        <link rel="icon" href="img/logo.jpg">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&amp;display=swap" rel="stylesheet"> 
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css" integrity="sha512-Hp+WwK4QdKZk9/W0ViDvLunYjFrGJmNDt6sCflZNkjgvNq9mY+0tMbd6tWMiAlcf1OQyqL4gn2rYp7UsfssZPA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+        <link href="css/style.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        
+        <script>
+            //global script
+        </script>
+
+    </head>
+    <body>
+
+        <!--============ROOT SECTION==============-->
+        <section id="root" class="position-relative overflow-x-hidden">
+            <!--=========HEADER BEGIN===========-->
+            <section class="navbar-expand-md flex-md-nowrap p-0">
+                <nav class="navbar m-0 p-0 navbar-light sticky-top align-items-center">
+
+                    <div id="sidebarMenu" class="collapse navbar-collapse pt-2">
+                        <div class="container d-flex justify-content-between align-items-center" style="width: 100%;">
+                            <ul class="navbar-nav mb-2 mb-lg-0">
+                
+                                <li class="nav-item mb-1">
+                                    <a class="navbar-brand text-light fs-6 ms-3 underline" href="#">Home</a>
+                                </li>
+
+                                <li class="nav-item mb-1">
+                                    <a class="navbar-brand text-light fs-6 ms-3 underline" href="#">Product</a>
+                                </li>
+
+                                <li class="nav-item mb-1">
+                                    <a class="navbar-brand text-light fs-6 ms-3 underline" href="#">Category</a>
+                                </li>
+
+                                <li class="nav-item mb-1">
+                                    <a class="navbar-brand text-light fs-6 ms-3 underline" href="#">Featured</a>
+                                </li>
+                            </ul>
+
+                            <ul class="navbar-nav mb-2 mb-lg-0">
+                
+                                <li class="nav-item mb-1">
+                                    <a class="navbar-brand text-light fs-6 ms-3 underline" href="#"><i class="fas fa-solid fa-user text-light"></i> Login</a>
+                                </li>
+
+                                <li class="nav-item mb-1">
+                                    <a class="navbar-brand text-light fs-6 ms-3 underline" href="#">Cart <i class="fas fa-solid fa-cart-shopping text-light"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>                   
+                    
+                </nav>
+
+                <nav class="navbar container navbar-light mx-auto py-3">
+                    <a class="navbar-brand fs-4 fw-bold" href="#" style="color:var(--main-blue);">GadgetGallery</a>
+            
+                    <form id="form-search" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100  navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn border bg-light rounded-0" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <button id="sidebarToggleTop" type="button" data-bs-toggle="modal" data-bs-target="#nav-menu" class="btn border rounded-0 p-2 mx-auto d-md-none mr-3 d-md-none collapsed fw-bold fs-6">
+                        <i class="fa fa-bars"> MENU</i>
+                    </button>
+                </nav>
+
+                <hr>
+                <nav class="navbar m-0 p-0 navbar-light sticky-top collapse navbar-collapse">
+                    <div class="container d-flex justify-content-center align-items-center">
+                        <ul class="navbar-nav mb-2 mb-lg-0 category-nav">
+            
+                            <li class="nav-item mb-1">
+                                <a class="navbar-brand ms-3" href="#">PCS</a>
+                            </li>
+
+                            <li class="nav-item mb-1">
+                                <a class="navbar-brand ms-3" href="#">HARDWARE</a>
+                            </li>
+
+                            <li class="nav-item mb-1">
+                                <a class="navbar-brand ms-3" href="#">SOFTWARE</a>
+                            </li>
+
+                            <li class="nav-item mb-1">
+                                <a class="navbar-brand ms-3" href="#">NETWORKING</a>
+                            </li>
+
+                            <li class="nav-item mb-1">
+                                <a class="navbar-brand ms-3" href="#">GAMING</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!--
+                <section class="py-4 text-center navbar mt-0" id="sectionHeader">
+                    <div class="container">
+                        <div class="row py-md-3 ">
+                        <div class="col-lg-6 col-md-8 mx-auto">
+                            <h1 class="fw-bold">CONNECT AND EARN</h1>
+                            <p>
+                                We are online/Network Marketing Community build to provide people with opportunity
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </section>-->
+
+                <div class="container-fluid mt-0 p-0" style="border-bottom: 10px solid var(--main-blue);">
+                    <img src="img/h1.jpg" alt="" width="100%" style="object-fit: fill;">
+                </div>
+                        
+            </section>
+            <!--=========HEADER END===========-->
+            
+            <!--=========MAIN BEGIN===========-->
+            <main>
+                <section class="products-section mt-4 mb-5" style="visibility: visible;">
+                    <div class="container" aria-label="featuredproducts" role="main">
+                        <h2 class="header-specials text-center"><span>Featured Products</span></h2>
+                        <div class="">
+                
+                
+                
+                            <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                                <ul class="product-items row">
+                                
+                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                        <div class="product-item">
+                                            <div class="img">
+                                                <a href="#">
+                                                    <img src="https://techsave-preview-com.3dcartstores.com/cdn-cgi/image/quality%3D85/assets/images/item-laptop1_thumbnail.jpg"
+                                                        alt="15.6'' Laptop" loading="lazy" class="img-responsive" draggable="false">
+                                                </a>
+            
+                
+                                            </div>
+
+                                            <div class="product-content">
+                                                <div class="reviews">               
+                
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                    
+                                                </div>
+
+                                                <div class="name">
+                                                    <a href="156-Laptop_p_12.html">15.6'' Laptop</a>
+                                                </div>
+
+                                                <div class="price">
+                
+                
+                                                    <del class="regular-price" aria-label="regular price">$500.00</del>
+                                                    <span class="sale-price" aria-label="sale price">$290.00</span>
+                                                    <span class="on-sale-badge" aria-label="sale badge">Sale</span>
+                
+                                                </div>
+
+                                                <div class="status">
+                
+                                                    <span class="availability" aria-label="availability">In Stock.</span>
+                
+                                                </div>
+                
+                
+                                                <div class="action">
+                                                    <a href=""
+                                                        class="add-to-cart rounded-0">
+                                                        <span class="buyitlink-text">Add To Cart</span>
+                                                        <span class="ajaxcart-loader icon-spin2 animate-spin"></span>
+                                                        <span class="ajaxcart-added icon-ok"></span>
+                                                    </a>
+                                                </div>
+                
+                
+                                            </div>
+                                        </div>                
+                                    </li>
+
+                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                        <div class="product-item">
+                                            <div class="img">
+                                                <a href="#">
+                                                    <img src="https://techsave-preview-com.3dcartstores.com/cdn-cgi/image/quality%3D85/assets/images/item-headphones1_thumbnail.jpg"
+                                                        alt="15.6'' Laptop" loading="lazy" class="img-responsive" draggable="false">
+                                                </a>
+            
+                
+                                            </div>
+
+                                            <div class="product-content">
+                                                <div class="reviews">               
+                
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                    
+                                                </div>
+
+                                                <div class="name">
+                                                    <a href="156-Laptop_p_12.html">15.6'' Laptop</a>
+                                                </div>
+
+                                                <div class="price">
+                
+                
+                                                    <del class="regular-price" aria-label="regular price">$500.00</del>
+                                                    <span class="sale-price" aria-label="sale price">$290.00</span>
+                                                    <span class="on-sale-badge" aria-label="sale badge">Sale</span>
+                
+                                                </div>
+
+                                                <div class="status">
+                
+                                                    <span class="availability" aria-label="availability">In Stock.</span>
+                
+                                                </div>
+                
+                
+                                                <div class="action">
+                                                    <a href=""
+                                                        class="add-to-cart rounded-0">
+                                                        <span class="buyitlink-text">Add To Cart</span>
+                                                        <span class="ajaxcart-loader icon-spin2 animate-spin"></span>
+                                                        <span class="ajaxcart-added icon-ok"></span>
+                                                    </a>
+                                                </div>
+                
+                
+                                            </div>
+                                        </div>                
+                                    </li>
+
+                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                        <div class="product-item">
+                                            <div class="img">
+                                                <a href="#">
+                                                    <img src="https://techsave-preview-com.3dcartstores.com/cdn-cgi/image/quality%3D85/assets/images/item-controller1_thumbnail.jpg"
+                                                        alt="15.6'' Laptop" loading="lazy" class="img-responsive" draggable="false">
+                                                </a>
+            
+                
+                                            </div>
+
+                                            <div class="product-content">
+                                                <div class="reviews">               
+                
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                    
+                                                </div>
+
+                                                <div class="name">
+                                                    <a href="156-Laptop_p_12.html">15.6'' Laptop</a>
+                                                </div>
+
+                                                <div class="price">
+                
+                
+                                                    <del class="regular-price" aria-label="regular price">$500.00</del>
+                                                    <span class="sale-price" aria-label="sale price">$290.00</span>
+                                                    <span class="on-sale-badge" aria-label="sale badge">Sale</span>
+                
+                                                </div>
+
+                                                <div class="status">
+                
+                                                    <span class="availability" aria-label="availability">In Stock.</span>
+                
+                                                </div>
+                
+                
+                                                <div class="action">
+                                                    <a href=""
+                                                        class="add-to-cart rounded-0">
+                                                        <span class="buyitlink-text">Add To Cart</span>
+                                                        <span class="ajaxcart-loader icon-spin2 animate-spin"></span>
+                                                        <span class="ajaxcart-added icon-ok"></span>
+                                                    </a>
+                                                </div>
+                
+                
+                                            </div>
+                                        </div>                
+                                    </li>
+
+                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                        <div class="product-item">
+                                            <div class="img">
+                                                <a href="#">
+                                                    <img src="https://techsave-preview-com.3dcartstores.com/cdn-cgi/image/quality%3D85/assets/images/thumbnails/item-gps1_thumbnail.jpg"
+                                                        alt="15.6'' Laptop" loading="lazy" class="img-responsive" draggable="false">
+                                                </a>
+            
+                
+                                            </div>
+
+                                            <div class="product-content">
+                                                <div class="reviews">               
+                
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                    
+                                                </div>
+
+                                                <div class="name">
+                                                    <a href="156-Laptop_p_12.html">15.6'' Laptop</a>
+                                                </div>
+
+                                                <div class="price">
+                
+                
+                                                    <del class="regular-price" aria-label="regular price">$500.00</del>
+                                                    <span class="sale-price" aria-label="sale price">$290.00</span>
+                                                    <span class="on-sale-badge" aria-label="sale badge">Sale</span>
+                
+                                                </div>
+
+                                                <div class="status">
+                
+                                                    <span class="availability" aria-label="availability">In Stock.</span>
+                
+                                                </div>
+                
+                
+                                                <div class="action">
+                                                    <a href=""
+                                                        class="add-to-cart rounded-0">
+                                                        <span class="buyitlink-text">Add To Cart</span>
+                                                        <span class="ajaxcart-loader icon-spin2 animate-spin"></span>
+                                                        <span class="ajaxcart-added icon-ok"></span>
+                                                    </a>
+                                                </div>
+                
+                
+                                            </div>
+                                        </div>                
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="products-section mt-5 mb-4" style="visibility: visible;">
+                    <div class="container" aria-label="featuredproducts" role="main">
+                        <h2 class="header-specials text-center"><span>NEW RELEASE</span></h2>
+                        <div class="">
+                
+                
+                
+                            <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                                <ul class="product-items row">
+                                
+                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                        <div class="product-item">
+                                            <div class="img">
+                                                <a href="#">
+                                                    <img src="https://techsave-preview-com.3dcartstores.com/cdn-cgi/image/quality%3D85/assets/images/item-laptop1_thumbnail.jpg"
+                                                        alt="15.6'' Laptop" loading="lazy" class="img-responsive" draggable="false">
+                                                </a>
+            
+                
+                                            </div>
+
+                                            <div class="product-content">
+                                                <div class="reviews">               
+                
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                    
+                                                </div>
+
+                                                <div class="name">
+                                                    <a href="156-Laptop_p_12.html">15.6'' Laptop</a>
+                                                </div>
+
+                                                <div class="price">
+                
+                
+                                                    <del class="regular-price" aria-label="regular price">$500.00</del>
+                                                    <span class="sale-price" aria-label="sale price">$290.00</span>
+                                                    <span class="on-sale-badge" aria-label="sale badge">Sale</span>
+                
+                                                </div>
+
+                                                <div class="status">
+                
+                                                    <span class="availability" aria-label="availability">In Stock.</span>
+                
+                                                </div>
+                
+                
+                                                <div class="action">
+                                                    <a href=""
+                                                        class="add-to-cart rounded-0">
+                                                        <span class="buyitlink-text">Add To Cart</span>
+                                                        <span class="ajaxcart-loader icon-spin2 animate-spin"></span>
+                                                        <span class="ajaxcart-added icon-ok"></span>
+                                                    </a>
+                                                </div>
+                
+                
+                                            </div>
+                                        </div>                
+                                    </li>
+
+                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                        <div class="product-item">
+                                            <div class="img">
+                                                <a href="#">
+                                                    <img src="https://techsave-preview-com.3dcartstores.com/cdn-cgi/image/quality%3D85/assets/images/item-headphones1_thumbnail.jpg"
+                                                        alt="15.6'' Laptop" loading="lazy" class="img-responsive" draggable="false">
+                                                </a>
+            
+                
+                                            </div>
+
+                                            <div class="product-content">
+                                                <div class="reviews">               
+                
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                    
+                                                </div>
+
+                                                <div class="name">
+                                                    <a href="156-Laptop_p_12.html">15.6'' Laptop</a>
+                                                </div>
+
+                                                <div class="price">
+                
+                
+                                                    <del class="regular-price" aria-label="regular price">$500.00</del>
+                                                    <span class="sale-price" aria-label="sale price">$290.00</span>
+                                                    <span class="on-sale-badge" aria-label="sale badge">Sale</span>
+                
+                                                </div>
+
+                                                <div class="status">
+                
+                                                    <span class="availability" aria-label="availability">In Stock.</span>
+                
+                                                </div>
+                
+                
+                                                <div class="action">
+                                                    <a href=""
+                                                        class="add-to-cart rounded-0">
+                                                        <span class="buyitlink-text">Add To Cart</span>
+                                                        <span class="ajaxcart-loader icon-spin2 animate-spin"></span>
+                                                        <span class="ajaxcart-added icon-ok"></span>
+                                                    </a>
+                                                </div>
+                
+                
+                                            </div>
+                                        </div>                
+                                    </li>
+
+                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                        <div class="product-item">
+                                            <div class="img">
+                                                <a href="#">
+                                                    <img src="https://techsave-preview-com.3dcartstores.com/cdn-cgi/image/quality%3D85/assets/images/item-controller1_thumbnail.jpg"
+                                                        alt="15.6'' Laptop" loading="lazy" class="img-responsive" draggable="false">
+                                                </a>
+            
+                
+                                            </div>
+
+                                            <div class="product-content">
+                                                <div class="reviews">               
+                
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                    
+                                                </div>
+
+                                                <div class="name">
+                                                    <a href="156-Laptop_p_12.html">15.6'' Laptop</a>
+                                                </div>
+
+                                                <div class="price">
+                
+                
+                                                    <del class="regular-price" aria-label="regular price">$500.00</del>
+                                                    <span class="sale-price" aria-label="sale price">$290.00</span>
+                                                    <span class="on-sale-badge" aria-label="sale badge">Sale</span>
+                
+                                                </div>
+
+                                                <div class="status">
+                
+                                                    <span class="availability" aria-label="availability">In Stock.</span>
+                
+                                                </div>
+                
+                
+                                                <div class="action">
+                                                    <a href=""
+                                                        class="add-to-cart rounded-0">
+                                                        <span class="buyitlink-text">Add To Cart</span>
+                                                        <span class="ajaxcart-loader icon-spin2 animate-spin"></span>
+                                                        <span class="ajaxcart-added icon-ok"></span>
+                                                    </a>
+                                                </div>
+                
+                
+                                            </div>
+                                        </div>                
+                                    </li>
+
+                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                        <div class="product-item">
+                                            <div class="img">
+                                                <a href="#">
+                                                    <img src="https://techsave-preview-com.3dcartstores.com/cdn-cgi/image/quality%3D85/assets/images/thumbnails/item-gps1_thumbnail.jpg"
+                                                        alt="15.6'' Laptop" loading="lazy" class="img-responsive" draggable="false">
+                                                </a>
+            
+                
+                                            </div>
+
+                                            <div class="product-content">
+                                                <div class="reviews">               
+                
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                    
+                                                </div>
+
+                                                <div class="name">
+                                                    <a href="156-Laptop_p_12.html">15.6'' Laptop</a>
+                                                </div>
+
+                                                <div class="price">
+                
+                
+                                                    <del class="regular-price" aria-label="regular price">$500.00</del>
+                                                    <span class="sale-price" aria-label="sale price">$290.00</span>
+                                                    <span class="on-sale-badge" aria-label="sale badge">Sale</span>
+                
+                                                </div>
+
+                                                <div class="status">
+                
+                                                    <span class="availability" aria-label="availability">In Stock.</span>
+                
+                                                </div>
+                
+                
+                                                <div class="action">
+                                                    <a href=""
+                                                        class="add-to-cart rounded-0">
+                                                        <span class="buyitlink-text">Add To Cart</span>
+                                                        <span class="ajaxcart-loader icon-spin2 animate-spin"></span>
+                                                        <span class="ajaxcart-added icon-ok"></span>
+                                                    </a>
+                                                </div>
+                
+                
+                                            </div>
+                                        </div>                
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!--=========MAIN END===========-->
+
+            <div class="newsletter">
+                <div class="mailist-box ajax-mailinglist" data-callfront="mailinglist_callfront"
+                    data-callback="mailinglist_response">
+                    <form method="post" name="mailing" action="">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12">
+                                    <h2>Mailing List</h2>
+                                </div>
+                                <div class="col-md-8 col-sm-12">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-xs-12">
+                                            <div class="mailinglist-form clearfix">
+                                                <input class="mailinglist-input form-control rounded-0" type="text" name="email"
+                                                    placeholder=" Email Address" autocomplete="off" aria-required="true"
+                                                    aria-label="email address" aria-invalid="true">
+                                                <button class="mailinglist-submit btn btn-default btn-inverse text-dark" type="submit"
+                                                    name="www" aria-label="mailinglist button">
+                                                    <span id="mailing-btn-txt "><i class="fa-solid fa-envelope"></i></span>
+                                                    <span id="mailing-btn-load"
+                                                        class="mailing-btn-load icon-spin2 animate-spin hidden"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-xs-12 antiCls" style="visibility: visible;">
+                                            <div class="clearfix maillist-options">
+                                                <div class="subscribe"><input id="list_subscribe" type="radio" name="subscribe"
+                                                        value="1" checked="checked"> <label for="list_subscribe">Subscribe</label>
+                                                </div>
+                                                <div class="subscribe"><input id="list_unsubscribe" type="radio" name="subscribe"
+                                                        value="0"> <label for="list_unsubscribe">Unsubscribe</label></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!--=========FOOTER BEGIN===========-->
+            <footer class="site-footer antiCls" id="site-footer" style="visibility: visible;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="visible-xs extrapages-shower">
+                                        <a href="#extrapages" role="button" data-toggle="collapse" class="collapsed">Links</a>
+                                    </div>
+                                    <div id="FRAME_LINKS">
+                                        <ul id="extrapages" class="list-unstyled extrapages row" role="list">
+                                            <li class="label hidden">Links</li>
+            
+                                            <li class="col-md-4 col-sm-6" role="listitem"><a href="blog.asp" target="_self"
+                                                    class="menu-bottom">Blog</a></li>
+                                            <li class="col-md-4 col-sm-6" role="listitem"><a href="Terms-and-Conditions_ep_2-1.html"
+                                                    target="_self" class="menu-bottom">Terms and Conditions</a></li>
+                                            <li class="col-md-4 col-sm-6" role="listitem"><a href="affiliateInfo.asp" target="_self"
+                                                    class="menu-bottom">Become an Affiliate</a></li>
+                                            <li class="col-md-4 col-sm-6" role="listitem"><a href="product_index.asp" target="_self"
+                                                    class="menu-bottom">Product Index</a></li>
+                                            <li class="col-md-4 col-sm-6" role="listitem"><a href="category_index.asp"
+                                                    target="_self" class="menu-bottom">Category Index</a></li>
+            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+            
+                            <ul class="social-icons list-unstyled list-inline d-flex">
+                                <li class="social-icons-label hidden-sm"> Stay Connected</li>
+            
+            
+                                <li>
+                                    <a href="#" class="facebook" target="_blank" title="Like Us on Facebook"
+                                        aria-label="Like Us on Facebook" role="button">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+            
+            
+            
+                                <li>
+                                    <a href="#" class="twitter" target="_blank" title="Follow Us on Twitter"
+                                        aria-label="Follow Us on Twitter" role="button">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                </li>
+            
+            
+                                <li>
+                                    <a href="#" class="youtube" target="_blank" title="Subscribe to our Channel"
+                                        aria-label="Subscribe to our Channel" role="button">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                </li>
+            
+            
+                                <li>
+                                    <a href="#" class="instagram" target="_blank" title="Follow Us on Instagram"
+                                        aria-label="Follow Us on Instagram" role="button">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+            
+            
+                            </ul>
+            
+                            <div class="clearfix"></div>
+                            <ul class="payment-icons list-unstyled list-inline">
+                            </ul>
+                        </div>
+                        <div class="col-sm-12">
+            
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="copyright_txt">
+                                    <p>Copyright <span id="current-year">2024</span>
+                                        <script type="text/javascript"
+                                            language="javascript">document.getElementById("current-year").innerHTML = new Date().getFullYear();</script>
+                                        Gadget Gallery Store. All Rights Reserved. <a
+                                            href="https://www.pixtinfinity.com" target="_blank">by
+                                            Pixtinfinity</a>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!--=========FOOTER END===========-->
+        </section>
+        <!--============ROOT SECTION END==============-->
+
+
+        <!--============= MODAL SECTION ===========-->
+
+        <div class="modal" id="nav-menu" tabindex="-1" aria-labelledby="nav-menu" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-fullscreen" style="height:100vh; width:70vw; color:var(--white);">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <form id="form-search" class="d-block d-sm-none form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100  navbar-search">
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-light small" placeholder="Search for..."
+                                    aria-label="Search" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn border bg-light rounded-0" type="button">
+                                        <i class="fas fa-search fa-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="" class="text-dark">
+                            <div class="nav_head ms-auto">
+                                <div class="container align-items-center mb-5">
+                                    <div>
+                                        <h5 class="fw-bold color-blue ">CATEGORIES</h5>
+                                        <hr>
+                                    </div>
+                                    <ul class="navbar-nav mb-2 mb-lg-0 category-nav">
+                        
+                                        <li class="nav-item mb-1">
+                                            <a class="navbar-brand ms-3" href="#">PCS</a>
+                                        </li>
+            
+                                        <li class="nav-item mb-1">
+                                            <a class="navbar-brand ms-3" href="#">HARDWARE</a>
+                                        </li>
+            
+                                        <li class="nav-item mb-1">
+                                            <a class="navbar-brand ms-3" href="#">SOFTWARE</a>
+                                        </li>
+            
+                                        <li class="nav-item mb-1">
+                                            <a class="navbar-brand ms-3" href="#">NETWORKING</a>
+                                        </li>
+            
+                                        <li class="nav-item mb-1">
+                                            <a class="navbar-brand ms-3" href="#">GAMING</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h5 class="fw-bold color-blue ">MENU LINKS</h5>
+                                    <hr>
+                                </div>
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item mb-1">
+                                        <a class="navbar-brand ms-3" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item mb-1">
+                                        <a class="navbar-brand ms-3" href="#">Products</a>
+                                    </li>
+                                    <li class="nav-item mb-1">
+                                        <a class="navbar-brand ms-3" href="#">Login</a>
+                                    </li>
+                                    <li class="nav-item mb-1">
+                                        <a class="navbar-brand ms-3" href="#">Cart</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--========JavaScript=========-->
+		<script type="module" src="js/app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!--========JavaScript END===-->
+    </body>
+</html>
