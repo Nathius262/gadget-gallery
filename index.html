@@ -83,53 +83,78 @@
                     
                 </nav>
 
-                <nav class="navbar container navbar-light mx-auto py-3">
-                    <a class="navbar-brand fs-4 fw-bold" href="#" style="color:var(--main-blue);">GadgetGallery</a>
+                <nav id="nav-title" class="navbar navbar-light mx-auto py-3">
+                    <div class="container">
+
+                        <a class="navbar-brand fs-4 fw-bold" href="#" style="color:var(--main-blue);">GadgetGallery</a>
             
-                    <form id="form-search" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100  navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn border bg-light rounded-0" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
+                        <form id="form-search" class="d-none d-md-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100  navbar-search">
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-light small" placeholder="Search for..."
+                                    aria-label="Search" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn border bg-light rounded-0" type="button">
+                                        <i class="fas fa-search fa-sm"></i>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    </form>
-
-                    <button id="sidebarToggleTop" type="button" data-bs-toggle="modal" data-bs-target="#nav-menu" class="btn border rounded-0 p-2 mx-auto d-md-none mr-3 d-md-none collapsed fw-bold fs-6">
-                        <i class="fa fa-bars"> MENU</i>
-                    </button>
-                </nav>
-
-                <hr>
-                <nav class="navbar m-0 p-0 navbar-light sticky-top collapse navbar-collapse">
-                    <div class="container d-flex justify-content-center align-items-center">
-                        <ul class="navbar-nav mb-2 mb-lg-0 category-nav">
-            
-                            <li class="nav-item mb-1">
-                                <a class="navbar-brand ms-3" href="#">PCS</a>
-                            </li>
-
-                            <li class="nav-item mb-1">
-                                <a class="navbar-brand ms-3" href="#">HARDWARE</a>
-                            </li>
-
-                            <li class="nav-item mb-1">
-                                <a class="navbar-brand ms-3" href="#">SOFTWARE</a>
-                            </li>
-
-                            <li class="nav-item mb-1">
-                                <a class="navbar-brand ms-3" href="#">NETWORKING</a>
-                            </li>
-
-                            <li class="nav-item mb-1">
-                                <a class="navbar-brand ms-3" href="#">GAMING</a>
-                            </li>
-                        </ul>
+                        </form>
+    
+                        <button id="sidebarToggleTop" type="button" data-bs-toggle="modal" data-bs-target="#nav-menu" class="btn border rounded-0 p-2 mx-right d-md-none mr-3 d-md-none collapsed fw-bold fs-6">
+                            <i class="fa fa-bars"> MENU</i>
+                        </button>
                     </div>
+                   
                 </nav>
+
+                <section id="caTnaV" class="categoriesNav navbar-wrapper hidden-xs" style="">
+                    
+                    <div class="container">
+                        <nav id="categories-outer" class="categories navbar-collapse collapse justify-content-center">
+                
+                
+                
+                            <ul id="categories" class="nav navbar-nav">
+                                <li class="">
+                                    <a href="Gaming_c_19.html">Gaming</a>
+                
+                                </li>
+                                <li class="">
+                                    <a href="PCs_c_12.html">PCs</a>
+                
+                                </li>
+                                <li class="">
+                                    <a href="Laptops_c_11.html">Laptops</a>
+                
+                                </li>
+                                <li class="">
+                                    <a href="Hardware_c_13.html">Hardware</a>
+                
+                                </li>
+                                <li class="">
+                                    <a href="Software_c_14.html">Software</a>
+                
+                                </li>
+                                <li class="">
+                                    <a href="Networking_c_15.html">Networking</a>
+                
+                                </li>
+                                <li class="">
+                                    <a href="Audio_c_16.html">Audio</a>
+                
+                                </li>
+                                <li class="">
+                                    <a href="Video_c_17.html">Video</a>
+                
+                                </li>
+                                <li class="">
+                                    <a href="Printers_c_18.html">Printers</a>
+                
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
                 <!--
                 <section class="py-4 text-center navbar mt-0" id="sectionHeader">
                     <div class="container">
@@ -163,7 +188,7 @@
                             <div class="flex-viewport" style="overflow: hidden; position: relative;">
                                 <ul class="product-items row">
                                 
-                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                    <li class="col-md-4 col-sm-6 col-12 col-lg-3 mb-3">
                                         <div class="product-item">
                                             <div class="img">
                                                 <a href="#">
@@ -219,7 +244,7 @@
                                         </div>                
                                     </li>
 
-                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                    <li class="col-md-4 col-sm-6 col-12 col-lg-3 mb-3">
                                         <div class="product-item">
                                             <div class="img">
                                                 <a href="#">
@@ -275,7 +300,7 @@
                                         </div>                
                                     </li>
 
-                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                    <li class="col-md-4 col-sm-6 col-12 col-lg-3 mb-3">
                                         <div class="product-item">
                                             <div class="img">
                                                 <a href="#">
@@ -331,7 +356,7 @@
                                         </div>                
                                     </li>
 
-                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                    <li class="col-md-4 col-sm-6 col-12 col-lg-3 mb-3">
                                         <div class="product-item">
                                             <div class="img">
                                                 <a href="#">
@@ -403,7 +428,7 @@
                             <div class="flex-viewport" style="overflow: hidden; position: relative;">
                                 <ul class="product-items row">
                                 
-                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                    <li class="col-md-4 col-sm-6 col-12 col-lg-3 mb-3">
                                         <div class="product-item">
                                             <div class="img">
                                                 <a href="#">
@@ -459,7 +484,7 @@
                                         </div>                
                                     </li>
 
-                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                    <li class="col-md-4 col-sm-6 col-12 col-lg-3 mb-3">
                                         <div class="product-item">
                                             <div class="img">
                                                 <a href="#">
@@ -515,7 +540,7 @@
                                         </div>                
                                     </li>
 
-                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                    <li class="col-md-4 col-sm-6 col-12 col-lg-3 mb-3">
                                         <div class="product-item">
                                             <div class="img">
                                                 <a href="#">
@@ -571,7 +596,7 @@
                                         </div>                
                                     </li>
 
-                                    <li class="col-md-6 col-12 col-lg-3 mb-3">
+                                    <li class="col-md-4 col-sm-6 col-12 col-lg-3 mb-3">
                                         <div class="product-item">
                                             <div class="img">
                                                 <a href="#">
@@ -708,7 +733,7 @@
                         <div class="col-sm-4">
             
                             <ul class="social-icons list-unstyled list-inline d-flex">
-                                <li class="social-icons-label hidden-sm"> Stay Connected</li>
+                                <li class="social-icons-label hidden-xs"> Stay Connected</li>
             
             
                                 <li>
@@ -757,10 +782,10 @@
                 </div>
                 <div class="copyright">
                     <div class="container">
-                        <div class="row">
+                        <div class="row justify-content-center">
                             <div class="col-xs-12">
                                 <div class="copyright_txt">
-                                    <p>Copyright <span id="current-year">2024</span>
+                                    <p class="text-center">Copyright <span id="current-year">2024</span>
                                         <script type="text/javascript"
                                             language="javascript">document.getElementById("current-year").innerHTML = new Date().getFullYear();</script>
                                         Gadget Gallery Store. All Rights Reserved. <a
@@ -784,7 +809,7 @@
             <div class="modal-dialog modal-fullscreen" style="height:100vh; width:70vw; color:var(--white);">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <form id="form-search" class="d-block d-sm-none form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100  navbar-search">
+                        <form id="form-search" class="d-block d-md-none form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100  navbar-search">
                             <div class="input-group">
                                 <input type="text" class="form-control bg-light small" placeholder="Search for..."
                                     aria-label="Search" aria-describedby="basic-addon2">
@@ -855,6 +880,29 @@
         </div>
 
         <!--========JavaScript=========-->
+
+        <script>
+
+
+            $(window).on("scroll", function() {
+                var scrollTop = $(window).scrollTop();
+                var screenWidth = window.innerWidth; 
+            
+                // Fix caTnaV when scrollTop is greater than 30px
+                if (scrollTop > 30) {
+                    $('#caTnaV').addClass('fixed-top mediumnavigation');
+                } else {
+                    $('#caTnaV').removeClass('fixed-top mediumnavigation');
+                }
+            
+                // Handle nav-title: Fixed when caTnaV is hidden (small screen) and scroll > 30px
+                if (screenWidth < 768 && scrollTop > 30) {
+                    $('#nav-title').addClass('fixed-top mediumnavigation');
+                } else {
+                    $('#nav-title').removeClass('fixed-top mediumnavigation');
+                }
+            });
+        </script>
 		<script type="module" src="js/app.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
