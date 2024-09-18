@@ -343,13 +343,12 @@ del.original-price {
     display: none
 }
 
-.action a{
+.action button{
     border: 2px solid var(--main-blue);
     color: var(--main-blue);
-    text-decoration: none;
     padding: 5px 8px;
 }
-.action a:hover{
+.action button:hover{
     background-color: var(--main-blue);
     color: var(--white);
     transition: all .5s linear;
@@ -563,4 +562,47 @@ del.original-price {
     .site-footer .col-sm-9>.row>.col-md-3.col-sm-6:nth-child(3) {
         clear:none
     }
+}
+
+
+/*CART SECTION*/
+@media(min-width: 768px) {
+
+	.floating-cart {
+		top: 50%;
+	}
+}
+.floating-cart {
+    position: fixed;
+    top: 75%;
+    right: 0;
+    z-index: 999;
+    background-color: #5b5b5d;
+    color: #fff;
+    border-radius: 20px 0 0 20px;
+    padding: 15px;
+    text-align: center;
+    width: 90px;
+    display: none;
+}
+
+.floating-cart a,
+.floating-cart a:hover {
+
+    color: #fff;
+    text-decoration: none;
+}
+.floating-cart i.cart-icon {
+    display: block;
+    font-size: 30px;
+    line-height: 1;
+
+}
+.floating-cart span.cart-details {
+    font-size: 12px;
+    text-transform: none;
+    display: block;
+    margin: 5px 0 0;
+
+
 }
